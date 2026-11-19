@@ -11,7 +11,10 @@ app = FastAPI(title="HealthOne API", version="1.0")
 # This block is critical for frontend-backend communication
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"], # Allows your Next.js app
+    allow_origins=[
+        "http://localhost:3000", 
+        "https://healthone-two.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
